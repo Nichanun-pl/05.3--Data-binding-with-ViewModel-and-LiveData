@@ -87,6 +87,9 @@ class GameFragment : Fragment() {
 // to all the data in the ViewModel
         binding.gameViewModel = viewModel
         return binding.root
+        // Specify the fragment view as the lifecycle owner of the binding.
+// This is used so that the binding can observe LiveData updates
+        binding.lifecycleOwner = viewLifecycleOwner
     }
 
 
